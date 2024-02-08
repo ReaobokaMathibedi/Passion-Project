@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interior Design Hub</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "DM Sans", sans-serif;
+        background: linear-gradient(
+          109.6deg,
+          rgba(0, 0, 0, 0.93) 11.2%,
+          rgb(63, 61, 61) 78.9%
+        );
+        color: #fff;
+      }
+
+      .container {
+        background-color: rgba(240, 240, 240, 0.5);
+        border-radius: 7px;
+        padding: 20px 10px;
+        margin: 20px auto;
+        max-width: 1200px;
+        max-height: 80vh;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .text-container {
+        float: left;
+        width: calc(50% - 60px);
+        padding-top: 90px;
+        padding-right: 20px;
+        padding-left: 40px;
+      }
+
+      h1,
+      h4 {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+
+      h4 {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+      }
+
+      .profile {
+        font-size: 0.75em;
+        margin-bottom: 30px;
+      }
+
+      img {
+        max-width: 50%;
+        max-height: 100vh;
+        border-radius: 7px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        float: right;
+      }
+
+      button {
+        display: block;
+        color: white;
+        font-size: 1em;
+        background: transparent;
+        padding: 10px 15px;
+        border: 1px solid white;
+        border-radius: 20px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+        transition: all 200ms ease-in-out;
+        margin-top: 20px;
+      }
+
+      button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      footer p {
+        font-size: 0.8em;
+        color: #ccc;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      #arcbazar-profile {
+        text-decoration: underline;
+        font-size: 0.75em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/496/original/isometric_plan.png?1706400237"
+        alt="Interior Design Image"
+      />
+      <div class="text-container">
+        <h4><em>A Journey from SimCity to Stunning Spaces</em></h4>
+        <h1><strong>INTERIOR DESIGN</strong></h1>
+        <div class="profile">
+          From SimCity to reality, my journey as a young female interior
+          designer began with a passion ignited by the Sims game. With
+          self-taught knowledge and a knack for creating stunning spaces, I
+          ventured into interior design contests, leaving my mark with 1st and
+          2nd place finishes in 2 out of 11 competitions so far. Get ready to be
+          amazed by my portfolio, where creativity and sass collide, brought to
+          you by the girl who turned her virtual passion into a tangible
+          reality.
+        </div>
+        <a
+          id="arcbazar-profile"
+          href="https://www.arcbazar.com/designer/south-africa-port-elizabeth-reaoboka-mathibedi-1?category=3"
+          target="_blank"
+          ><em>Check out my other design.</em></a
+        >
+        <button id="exploreButton">Explore</button>
+      </div>
+    </div>
+    <footer>
+      <p>Coded by Reaoboka Mathibedi</p>
+    </footer>
+    <script>
+      function redirect() {
+        let userName = prompt("What is your name?");
+        let interest = prompt(
+          "Hi " + userName + "! Do you like interior design?"
+        );
+
+        if (interest && interest.toLowerCase() === "yes") {
+          alert("Continue to view my design profile.");
+          window.open(
+            "https://gopillar.com/designers/reaoboka-mathibedi?type=commercial&subtype=club",
+            "_blank"
+          );
+        } else {
+          alert("Continue to view my landing page.");
+          document.querySelector("h4").innerHTML =
+            "Welcome to my landing page project!";
+        }
+      }
+
+      document
+        .getElementById("exploreButton")
+        .addEventListener("click", redirect);
+    </script>
+  </body>
+</html>
